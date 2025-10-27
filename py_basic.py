@@ -44,6 +44,7 @@
 # CRUD: Create, Read, Update and Delete
 # lista: mutavel || tupla: imutavel
 # sep = " " : pula linha
+# set(): guarda elementos unicos, sem repetir (pode remover de uma lista)
 
 ''' 
 Docstrings
@@ -972,37 +973,185 @@ CPF: 198.261.197-92 (198261197)
 
 """
 
-cpf_digitado = "19826119792"
+"""while True:
 
-nove_digitos = cpf_digitado[:9]
-ctg_regressiva_1 = 10
+    cpf_digitado = input(str("digite um CPF (apenas números): "))
 
-resultado_d1 = 0
-for digito in nove_digitos:
-    resultado_d1 += int(digito) * ctg_regressiva_1
-    ctg_regressiva_1 -= 1
+    if not cpf_digitado.isdigit():
+        print("Digite apenas digitos!")
+        continue
 
-d1 = (resultado_d1 * 10) % 11
-d1 = d1 if d1 <= 9 else 0
+    if len(cpf_digitado) != 11:
+        print("Digite 11 digitos!")
+        continue
 
-# ///// 
+    if len(set(cpf_digitado)) == 1: 
+        print("Números iguais!")
+        continue
 
-dez_digitos = nove_digitos + str(d1)
-ctg_regressiva_2 = 11
+     # ///d1
+    nove_digitos = cpf_digitado[:9]
+    ctg_regressiva_1 = 10
 
-resultado_d2 = 0 
-for digito in dez_digitos:
-    resultado_d2 += int(digito) * ctg_regressiva_2
-    ctg_regressiva_2 -= 1
+    resultado_d1 = 0
+    for digito in nove_digitos:
+        resultado_d1 += int(digito) * ctg_regressiva_1
+        ctg_regressiva_1 -= 1
 
-d2 = (resultado_d2 * 10) % 11
-d2 = d2 if d2 <= 9 else 0
+    d1 = (resultado_d1 * 10) % 11
+    d1 = d1 if d1 <= 9 else 0
 
-cpf_verificado = f"{nove_digitos}{d1}{d2}"
-print(cpf_verificado)
+    # ///d2
+    dez_digitos = nove_digitos + str(d1)
+    ctg_regressiva_2 = 11
 
-if cpf_digitado == cpf_verificado:
-    print(f"o CPF {cpf_digitado} é válido!")
-else:
-    print(f"o CPF {cpf_digitado} não é válido!")
+    resultado_d2 = 0 
+    for digito in dez_digitos:
+        resultado_d2 += int(digito) * ctg_regressiva_2
+        ctg_regressiva_2 -= 1
+
+    d2 = (resultado_d2 * 10) % 11
+    d2 = d2 if d2 <= 9 else 0
+
+    cpf_verificado = f"{nove_digitos}{d1}{d2}"
+
+    if cpf_digitado == cpf_verificado:
+        print(f"o CPF {cpf_digitado} é válido!")
+    else:
+        print(f"o CPF {cpf_digitado} não é válido!")
+    break"""
+
+
+# exercicio: gerador de CPF !!!
+"""
+import random
+nove_digitos = ""
+for i in range(9):
+    nove_digitos += str(random.randint(0,9))
+print(nove_digitos)
+"""
+
+
+
+
+
+# ------------ fim ------------
+ 
+
+
+
+
+
+# exercicios de fixação - 1
+
+"""lista_compras = []
+continuar = True
+
+while continuar:
+    opcao = int(input("adicionar (1) | remover (2) | listar (3) | sair (4): "))
+    if opcao == 1:
+        item = input("digite item para adicionar: ")
+        lista_compras.append(item)
+    elif opcao == 2:
+        remover= input("digite item para remover: ")
+        if remover in lista_compras:
+            lista_compras.remove(remover)
+        else:
+            print("erro!")
+            continue
+    elif opcao == 3:
+        for i, itens in enumerate(lista_compras):
+            print(i, "-", itens)
+    elif opcao == 4:
+        print("adeus!")
+        break
+    else:
+        print("erro!")
+        continue"""
+
+
+
+# exercicios de fixação - 2
+
+"""vogais = ["a", "e", "i", "o" ,"u"]
+palavra = input("digite uma palavra: ")
+qtd = 0
+
+for letra in palavra:
+    if letra in vogais:
+        qtd +=1
+
+print(qtd)
+        """
+
+
+# exercicios de fixação - 3
+"""
+i = 0
+num_array = []
+
+while i < 3:
+    num = int(input(f"num {i}: "))
+    i+=1
+    num_array.append(num)
+
+maior = max(num_array)
+print(maior)"""
+
+
+# exercicios de fixação - 4
+
+"""i = 0
+
+while i < 10:
+    i+=1
+    print(i, end = " ")"""
+
+
+# exercicios de fixação - 5
+"""
+num = int(input("num: "))
+i = 0
+while i < 10:
+    i+=1
+    mt = num * i
+    print (f"{num} * {i} = {mt}") """
+
+
+# exercicios de fixação - 6
+
+"""senha_correta = "enfermeiro_elson"
+
+while True: 
+    senha_digitada = str(input("digite a senha: "))
+    if senha_digitada == senha_correta:
+        print("acertou")
+        break
+    else:
+        print("errou")
+        continue"""
+
+
+# exercicios de fixação - 7
+
+"""soma = 0
+
+for i in range(5):
+    num = int(input(f"num {i+1}: "))
+    soma += num
+print(soma)"""
+
+
+# exercicios de fixação - 8
+"""
+texto = "ibuprofeno"
+qtd = 0
+
+for letra in texto:
+    qtd += 1
+
+print(qtd)"""
+
+
+
 
