@@ -43,6 +43,7 @@
 #     ---> WHILE: não sei quantas repetições vão ter
 # CRUD: Create, Read, Update and Delete
 # lista: mutavel || tupla: imutavel
+# sep = " " : pula linha
 
 ''' 
 Docstrings
@@ -926,9 +927,82 @@ for i, equipe in enumerate(equipes):
 
 
 # desempacotamento em chamadas de função
-    
+"""
+lista = ["jorge", "rogerio", "enfermeiro", "mano", "elson"]
+string = "abcd"
 
-            
-             
-             
-             
+a, b, *_, ultimo = lista
+print(a,b,ultimo) # desempacotando
+
+print(*lista)
+print(*string) #enviando separadamente = a b c d"""
+
+
+# operação ternária
+"""
+condicao = 20 == 10
+variavel = "igual" if condicao else "diferente"
+print(variavel)
+
+digito = 1
+novo_digito = digito if digito <=9 else 0
+print(novo_digito)"""
+
+
+# teste de: for i in range
+"""
+CPF = [74682489070] # \\\\ calculo de cima
+mp = [] 
+
+j=10
+for i in range(9):
+        contagem = int(str(CPF[0])[i]) * j
+        j-=1  
+        mp.append(contagem)
+        
+print(mp) # outra forma de fazer a conta abaixo"""
+
+
+# exercicio: validando CPF !!!
+
+"""
+CPF: 198.261.197-92 (198261197)
+10  9   8   7   6   5   4   3   2   
+1   9   8   2   6   1   1   9   7  
+
+"""
+
+cpf_digitado = "19826119792"
+
+nove_digitos = cpf_digitado[:9]
+ctg_regressiva_1 = 10
+
+resultado_d1 = 0
+for digito in nove_digitos:
+    resultado_d1 += int(digito) * ctg_regressiva_1
+    ctg_regressiva_1 -= 1
+
+d1 = (resultado_d1 * 10) % 11
+d1 = d1 if d1 <= 9 else 0
+
+# ///// 
+
+dez_digitos = nove_digitos + str(d1)
+ctg_regressiva_2 = 11
+
+resultado_d2 = 0 
+for digito in dez_digitos:
+    resultado_d2 += int(digito) * ctg_regressiva_2
+    ctg_regressiva_2 -= 1
+
+d2 = (resultado_d2 * 10) % 11
+d2 = d2 if d2 <= 9 else 0
+
+cpf_verificado = f"{nove_digitos}{d1}{d2}"
+print(cpf_verificado)
+
+if cpf_digitado == cpf_verificado:
+    print(f"o CPF {cpf_digitado} é válido!")
+else:
+    print(f"o CPF {cpf_digitado} não é válido!")
+
