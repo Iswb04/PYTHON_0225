@@ -1,11 +1,16 @@
 
 # observações:
 
-# refatorar: editar o código
+# Refatorar: editar o código
+# Usar return! não é comum dar prints em funções! 
 # 0 = Falsy
-# *args: empacotamento e desempacotamento - (dentro de uma tupla)
-#       --> passa quantidade ilimitada de argumentos não nomeados
-
+# *args:
+#       --> Empacotamento e desempacotamento
+#       --> Dentro de uma tupla
+#       --> Passa quantidade ilimitada de argumentos não nomeados
+# Higher Order Functions: 
+#       --> função que pode receber outras funções como argumentos /
+# ou retornar uma função como resultado
 
 
 
@@ -133,7 +138,7 @@ outra_soma = soma(*numeros) # empacotar
 print(outra_soma)"""
 
 
-# exercicios com função
+# Exercicios com função
 ...
 """def ex1(*args):
     resultado = 1 # vc não pode começar a multiplicar por 0
@@ -155,5 +160,32 @@ num_escolhido = int(input("Número: "))
 print(ex2(num_escolhido))"""
 
 
-# Higher Order Functions - Funções de primeira classe
+# Higher Order Functions
+
+"""def saudacao(msg, nome):
+    return f"{msg}, {nome}" 
+
+def executa(funcao, *args): # funcao = saudacao | args = bom dia, jorge
+    return funcao(*args)
+
+variavel = executa(saudacao, "Bom dia", "Jorge")
+print(variavel)"""
+
+
+# Closure e funções que retornam outras funções:
+
+"""def  criar_saudacao(saudacao):
+    def saudar(nome):
+            return f"{saudacao}, {nome}"
+    return saudar
+
+falar_bom_dia = criar_saudacao("Bom dia")
+falar_boa_noite = criar_saudacao("Boa noite")
+
+for nome in ["Jorge", "Rogerio", "Elson"]:
+      print(falar_bom_dia(nome))
+      print(falar_boa_noite(nome))"""
+
+
+# Exercicios com função 2:
 

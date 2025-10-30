@@ -1,4 +1,14 @@
 1- API REST
 2 - Deploy
 3 - DevOps
-4 - Git
+
+4 - Git:
+Git é um sistema de controle de versão distribuído.
+Ele serve para controlar e gerenciar mudanças em arquivos /
+normalmente código, mas pode ser qualquer tipo de arquivo.
+
+- Open Source
+- Funciona localmente
+- Guardar diferentes versões de um projeto.
+- Voltar no tempo caso algo dê errado.
+- Trabalhar em equipe sem perder o controle de quem fez o quê.
