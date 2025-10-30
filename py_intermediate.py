@@ -189,3 +189,4 @@ for nome in ["Jorge", "Rogerio", "Elson"]:
 
 # Exercicios com função 2:
 
+aaa

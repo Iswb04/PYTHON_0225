@@ -1152,4 +1152,3 @@ for letra in texto:
 
 print(qtd)"""
 
-
