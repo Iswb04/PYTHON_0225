@@ -363,7 +363,7 @@ print(pessoa)"""
 
 
 # Exercicio - sistema de perguntas e respostas: 
-
+"""
 perguntas = [
     {
         "pergunta": "quanto é 2+2?",
@@ -399,4 +399,7 @@ while i < len(perguntas):
     i+=1
 
 
-print(f"você acertou {acertos} pergunta(s)!")
+print(f"você acertou {acertos} pergunta(s)!")"""
+
+
+
