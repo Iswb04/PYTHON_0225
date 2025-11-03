@@ -28,5 +28,13 @@
     --> Docker é uma plataforma usada para criar, executar /
     e gerenciar containers que são ambientes isolados /
     (como mini máquinas virtuais, mas muito mais leves).
-    
+
+    > principais usos para o docker:
+      1 - Padronizar ambientes (todos os devs usam o mesmo ambiente)
+      2 - Facilitar o deploy (empacota a aplicação em uma imagem Docker)
+      3 - Isolamento (cada container é independente)
+      4 - Escalabilidade (executa containers múltiplos de forma simples)
+      5 - Integração com CI/CD (como Github)
+
 * utilizar MySQL
+
