@@ -1,4 +1,4 @@
-1- API REST
+1 - API REST
 2 - Deploy
 3 - DevOps
 
