@@ -1,18 +1,19 @@
 
-services: 
+services:
   mysql_studies:
     container_name: container_01
     hostname: zabeau
     image: mysql
+    platform: linux/amd64
     restart: always
     command:
       - --default-authentication-plugin=mysql_native_password
       - --character-set-server=utf8mb4
-      - --collation-server=tf8mb4_unicode_ci
+      - --collation-server=utf8mb4_unicode_ci
     volumes:
       - /c/Users/isabella.rocha/Documents/GitHub/MYSQL_0225:/var/lib/mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: data_base
