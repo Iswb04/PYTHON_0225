@@ -51,6 +51,7 @@
      --> docker compose up -d
      --> docker ps -a
      --> docker compose down
+     --> docker stop <id ou nome do container>
 
 
 * o que é YML:  

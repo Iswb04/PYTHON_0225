@@ -1,4 +1,5 @@
 
+
 services:
   mysql_studies:
     container_name: container_01
@@ -11,7 +12,7 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
     volumes:
-      - /c/Users/isabella.rocha/Documents/GitHub/MYSQL_0225:/var/lib/mysql
+      - /c/Users/isabella.rocha/Documents/GitHub/DOCKER_0225:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
