@@ -36,5 +36,9 @@
       4 - Escalabilidade (executa containers múltiplos de forma simples)
       5 - Integração com CI/CD (como Github)
 
+    --> No Windows, o Docker (rodando via WSL2) /
+     não aceita caminhos com barra invertida! 
+     * Forma correta: /c/Users/...
+
 * utilizar MySQL
 
