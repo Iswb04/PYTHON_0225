@@ -13,5 +13,28 @@ normalmente código, mas pode ser qualquer tipo de arquivo.
 - Voltar no tempo caso algo dê errado.
 - Trabalhar em equipe sem perder o controle de quem fez o quê.
 
+5 - python -m venv venv (cria um ambiente virtual em Python)
+        -> ambiente isolado onde você instala bibliotecas Python / 
+           sem afetar o Python do sistema ou outros projetos.
 
-aaaa
+6 - pip install django
+    -> atualizar pip: pip install pip --upgrade
+    -> django-admin / deactivate
+    -> django-admin startproject project .   (. joga na raiz da pasta)
+  * -> manage.py = comando central do django
+        -> python manage.py runserver (comando para subir um servidor)
+        -> python manage.py startapp nome_do_app (criar user admin)
+        -> O QUE É: framework web em Python usado para criar sites /
+        e sistemas web completos de forma rápida e organizada.
+
+
+    | Coisa     | Flask           | Django          |
+    | --------- | --------------- | --------------- |
+    | Login     | Você cria tudo  | Já vem pronto   |
+    | Banco     | SQL manual      | *ORM automático |
+    | Segurança | Você implementa | Vem integrado   |
+    | Admin     | Não tem         | Admin pronto    |
+    | Estrutura | Livre           | Padronizada     |
+
+* ORM é o que permite você trabalhar com banco de dados usando código /
+Python, sem escrever SQL diretamente.
