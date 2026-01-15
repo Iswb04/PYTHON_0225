@@ -3,7 +3,7 @@ from time import sleep
 
 console = Console()
 
-def type_text(text: str, delay: float = 0.08, color: str = "cyan"):
+def type_text(text: str, delay: float = 0.07, color: str = "cyan"):
     for char in text:
         console.out(char, end="", style=color)  
         sleep(delay)
@@ -21,7 +21,7 @@ def printLyrics():
     ]
 
     for line in lines:
-        type_text(line, delay=0.08)  # 0.03s por letra
+        type_text(line, delay=0.07)  # 0.03s por letra
         sleep(0.45) 
 
 if __name__ == "__main__":
